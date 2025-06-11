@@ -28,25 +28,27 @@ pip install selenium-wire undetected-chromedriver fake-useragent numpy
 
     Download and install Windscribe CLI from https://windscribe.com/download
 
-    Login to Windscribe via CLI:
-    windscribe login
+Login to Windscribe via CLI:
+```bash
+windscribe login
+```
 
-    Ensure the CLI path in the script is correct:
+Ensure the CLI path in the script is correct:
 
     w_path = r"C:\\Program Files\\Windscribe\\Windscribe-cli.exe" or the linux path
 
 ## 🛠️ Configuration
 
-    Edit the following variables in the script:
+Edit the following variables in the script:
     
     username = "your_tls_username"
     password = "your_tls_password"
     
-    Optionally replace vpn("connect", location) with a proxy API configuration block if not using Windscribe.
+Optionally replace vpn("connect", location) with a proxy API configuration block if not using Windscribe.
 
 ## 🧪 Proxy API Option (optional)
 
-    You may replace VPN rotation with a proxy provider:
+You may replace VPN rotation with a proxy provider:
     
     API_KEY = 'your_key_here'
     s_options = {
@@ -57,30 +59,30 @@ pip install selenium-wire undetected-chromedriver fake-useragent numpy
         },
     }
     
-    Then pass s_options into your driver config.
+Then pass s_options into your driver config.
 
 ## 📈 How It Works
 
-    Connects to a random VPN server
+- Connects to a random VPN server
 
-    Launches an undetected Chrome session
+- Launches an undetected Chrome session
 
-    Spoofs headers and user-agent
+- Spoofs headers and user-agent
 
-    Logs into TLSContact portal
+- Logs into TLSContact portal
 
-    Navigates to appointment section
+- Navigates to appointment section
 
-    Scrapes available dates
+- Scrapes available dates
 
-    Disconnects VPN
+- Disconnects VPN
 
-    Waits 5 minutes and repeats
+- Waits 5 minutes and repeats
 
 ## ⚠️ Disclaimer
 
-    Use responsibly and ethically.
+Use responsibly and ethically.
 
-    Automating appointment systems may violate TLSContact's Terms of Service.
+Automating appointment systems may violate TLSContact's Terms of Service.
 
-    You assume all risks for using this tool.
+You assume all risks for using this tool.
