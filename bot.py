@@ -21,8 +21,10 @@ def interceptor(request):
     del request.headers["sec-ch-ua"]  # Delete the header first
     del request.headers["sec-ch-ua-platform"]  # Delete the header first
     request.headers["user-agent"] = uagent
+    
     # set the "Sec-CH-UA" header
     request.headers["sec-ch-ua"] = sec
+    
     # set the "referer" header
     # request.headers["referer"] = referer
     request.headers["sec-ch-ua-platform"] = os
@@ -83,6 +85,13 @@ def get_os(agent):
   
 # this function uses windscribe vpn for proxy rotation to bypass rate limiting, external proxies can also be used. 
 def vpn(action, location=None):
+    
+    # windscribe cli exeutable path
+    
+    # linux
+    # w_path = "/usr/bin/windscribe-cli"
+
+    # windows
     w_path = r"C:\\Program Files\\Windscribe\\Windscribe-cli.exe"
     if location is None:
         command = f'"{w_path}" {action}'
@@ -159,8 +168,8 @@ while True:
     uagent = UserAgent().random
 
     # tls username and password
-    username =
-    password = 
+    username = TLS_USERNAME
+    password = TLS_PASSWORD
 
     chrome_options = uc.ChromeOptions()
     chrome_options.add_argument("--disable-blink-features=AutomationControlled")
