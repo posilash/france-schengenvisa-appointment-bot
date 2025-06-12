@@ -44,7 +44,7 @@ Edit the following variables in the script:
     username = "your_tls_username"
     password = "your_tls_password"
     
-Optionally replace vpn("connect", location) with a proxy API configuration block if not using Windscribe.
+Optionally replace `vpn("connect", location)` with a proxy API configuration block if not using Windscribe.
 
 ## 🧪 Proxy API Option (optional)
 
@@ -59,7 +59,7 @@ You may replace VPN rotation with a proxy provider:
         },
     }
     
-Then pass s_options into your driver config.
+Then pass `s_options` into your driver config.
 
 ## 📈 How It Works
 
